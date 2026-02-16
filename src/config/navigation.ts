@@ -1,296 +1,7 @@
-// export interface NavSubItem {
-//   label: string;
-//   href: string;
-// }
-
-// export interface NavSubCategory {
-//   title: string;
-//   items: NavSubItem[];
-// }
-
-// export interface NavItem {
-//   label: string;
-//   href?: string;
-//   subCategories?: NavSubCategory[];
-// }
-
-// export const navigationConfig: NavItem[] = [
-//   {
-//     label: "About Us",
-//     subCategories: [
-//       {
-//         title: "Overview",
-//         items: [
-//           { label: "S.E. Society", href: "/about/se-society" },
-//           { label: "ACS", href: "/about/acs" },
-//         ],
-//       },
-//       {
-//         title: "S.E. Society",
-//         items: [
-//           { label: "President's Message", href: "/about/president-message" },
-//           { label: "Chairman's Message", href: "/about/chairman-message" },
-//           { label: "Vice-Principal's Message", href: "/about/vice-principal-message" },
-//           { label: "Director's Message", href: "/about/director-message-1" },
-//           { label: "Director's Message", href: "/about/director-message-2" },
-//         ],
-//       },
-//       {
-//         title: "Institute Development Plan",
-//         items: [
-//           { label: "Vision", href: "/about/vision" },
-//           { label: "Mission", href: "/about/mission" },
-//           { label: "Objectives", href: "/about/objectives" },
-//           { label: "Institution Policy", href: "/about/policy" },
-//           { label: "Strategic Plan", href: "/about/strategic-plan" },
-//         ],
-//       },
-//       {
-//         title: "Permission & Approvals",
-//         items: [
-//           { label: "Maharashtra Govt.", href: "/about/maharashtra-govt" },
-//           { label: "AICTE / UGC", href: "/about/aicte-ugc" },
-//           { label: "SPPU", href: "/about/sppu" },
-//         ],
-//       },
-//       {
-//         title: "Recognition",
-//         items: [
-//           { label: "2F", href: "/about/2f" },
-//           { label: "12B", href: "/about/12b" },
-//         ],
-//       },
-//       {
-//         title: "Accreditation & Ranking",
-//         items: [{ label: "NAAC", href: "/about/naac" }],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Administration",
-//     subCategories: [
-//       {
-//         title: "Governance",
-//         items: [
-//           { label: "Board of Management", href: "/administration/board" },
-//           { label: "Organogram (Chart)", href: "/about/organogram" },
-//           { label: "List of Committees", href: "/about/committees" },
-//         ],
-//       },
-//       {
-//         title: "Committees",
-//         items: [
-//           { label: "Statutory Committees", href: "/administration/statutory-committees" },
-//           { label: "Non-Statutory Committees", href: "/administration/non-statutory-committees" },
-//         ],
-//       },
-//       {
-//         title: "Code of Conduct",
-//         items: [{ label: "View Code of Conduct", href: "/administration/code-of-conduct" }],
-//       },
-//       {
-//         title: "Academic Leadership",
-//         items: [{ label: "Leadership Team", href: "/administration/leadership" }],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Human Capital",
-//     subCategories: [
-//       {
-//         title: "Staff",
-//         items: [
-//           { label: "Teaching Staff", href: "/human-capital/teaching-staff" },
-//           { label: "Non-Teaching Staff", href: "/human-capital/non-teaching-staff" },
-//           { label: "Guest Faculty", href: "/human-capital/guest-faculty" },
-//         ],
-//       },
-//       {
-//         title: "Development",
-//         items: [{ label: "Faculty Development", href: "/human-capital/faculty-development" }],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Academics",
-//     subCategories: [
-//       {
-//         title: "Programs",
-//         items: [
-//           { label: "Arts", href: "/academics/arts" },
-//           { label: "Commerce", href: "/academics/commerce" },
-//           { label: "Science", href: "/academics/science" },
-//           { label: "Online/Offline Certification", href: "/academics/certification" },
-//         ],
-//       },
-//       {
-//         title: "Calendar",
-//         items: [
-//           { label: "IQAC", href: "/academics/iqac-calendar" },
-//           { label: "IIC Chart", href: "/academics/iic-chart" },
-//           { label: "Academic", href: "/academics/academic-calendar" },
-//           { label: "Departmental", href: "/academics/departmental" },
-//           { label: "Training & Placement", href: "/academics/training-placement" },
-//           { label: "Activity", href: "/academics/activity" },
-//           { label: "Examination", href: "/academics/examination" },
-//         ],
-//       },
-//       {
-//         title: "Admission",
-//         items: [
-//           { label: "Prospectus", href: "/academics/prospectus" },
-//           { label: "Admission Process & Guidelines", href: "/academics/admission-process" },
-//           { label: "Fees Policies", href: "/academics/fees-policies" },
-//           { label: "MOUs & Linkage", href: "/academics/mous-linkage" },
-//         ],
-//       },
-//       {
-//         title: "Fee Structure",
-//         items: [
-//           { label: "BBA", href: "/academics/fee-structure/bba" },
-//           { label: "BCA", href: "/academics/fee-structure/bca" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Student Corner",
-//     subCategories: [
-//       {
-//         title: "Student Support",
-//         items: [
-//           { label: "Facilities for Differently Abled", href: "/student-corner/differently-abled" },
-//           { label: "Student Grievance Redressal Cell", href: "/student-corner/grievance-cell" },
-//           { label: "Internal Complaint Cell", href: "/student-corner/complaint-cell" },
-//           { label: "Anti-Ragging Committee", href: "/student-corner/anti-ragging" },
-//           { label: "Equal Opportunity Cell", href: "/student-corner/equal-opportunity" },
-//         ],
-//       },
-//       {
-//         title: "Extra-Curricular",
-//         items: [
-//           { label: "Sports", href: "/student-corner/sports" },
-//           { label: "NSS", href: "/student-corner/nss" },
-//           { label: "Health Facilities", href: "/student-corner/health" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Information Corner",
-//     subCategories: [
-//       {
-//         title: "Updates",
-//         items: [
-//           { label: "Circulars & Notices", href: "/information/circulars" },
-//           { label: "Announcements", href: "/information/announcements" },
-//           { label: "News / Letters", href: "/information/news" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Research & Development",
-//     subCategories: [
-//       {
-//         title: "Research Cell",
-//         items: [
-//           { label: "IIC", href: "/research/iic" },
-//           { label: "Startup & Innovation", href: "/research/startup" },
-//         ],
-//       },
-//       {
-//         title: "Publications",
-//         items: [
-//           { label: "Research Articles", href: "/research/articles" },
-//           { label: "Books", href: "/research/books" },
-//           { label: "Patents", href: "/research/patents" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Placement & Career",
-//     subCategories: [
-//       {
-//         title: "Placement Cell",
-//         items: [
-//           { label: "Brochure", href: "/placement/brochure" },
-//           { label: "Industrial Visits / Talks", href: "/placement/industrial-visits" },
-//           { label: "Pre-Placement Activities", href: "/placement/pre-placement" },
-//           { label: "Placement Records", href: "/placement/records" },
-//           { label: "Alumni", href: "/placement/alumni" },
-//           { label: "Recruitments", href: "/placement/recruitments" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "IQAC",
-//     subCategories: [
-//       {
-//         title: "IQAC",
-//         items: [
-//           { label: "Meeting", href: "/iqac/meeting" },
-//           { label: "Calendar", href: "/iqac/calendar" },
-//           { label: "Certification of Accreditation", href: "/iqac/certification" },
-//           { label: "IIQA", href: "/iqac/iiqa" },
-//           { label: "SSR", href: "/iqac/ssr" },
-//           { label: "AQRA", href: "/iqac/aqra" },
-//           { label: "Best Practices", href: "/iqac/best-practices" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Library & Publications",
-//     subCategories: [
-//       {
-//         title: "Library",
-//         items: [
-//           { label: "About Library", href: "/library/about" },
-//           { label: "Teaching Notes", href: "/library/teaching-notes" },
-//           { label: "College Magazine", href: "/library/magazine" },
-//           { label: "Prospectus", href: "/library/prospectus" },
-//           { label: "Placement Brochure", href: "/library/placement-brochure" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Reports & Downloads",
-//     subCategories: [
-//       {
-//         title: "Reports",
-//         items: [
-//           { label: "Academic", href: "/reports/academic" },
-//           { label: "Placement", href: "/reports/placement" },
-//           { label: "IIC", href: "/reports/iic" },
-//         ],
-//       },
-//       {
-//         title: "Downloads",
-//         items: [{ label: "All Downloads", href: "/downloads" }],
-//       },
-//     ],
-//   },
-//   {
-//     label: "Feedback",
-//     href: "/feedback",
-//   },
-//   {
-//     label: "Photo Gallery",
-//     href: "/gallery",
-//   },
-//   {
-//     label: "Contact Us",
-//     href: "/contact",
-//   },
-// ];
-
 export interface NavSubItem {
   label: string;
   href: string;
+   target?: string; // Add this line
 }
 
 export interface NavSubCategory {
@@ -746,11 +457,13 @@ export const navigationConfig: NavItem[] = [
         items: [
           {
             label: "Statutory Committees",
-            href: "/administration/statutory-committees",
+            // href: "/administration/statutory-committees",
+             href: "http://snbpacsms.com/assets/PDF/Satutory.pdf"
           },
           {
             label: "Non-Statutory Committees",
-            href: "/administration/non-statutory-committees",
+            // href: "/administration/non-statutory-committees",
+             href: "http://snbpacsms.com/assets/PDF/Non-Satutory.pdf"
           },
         ],
       },
@@ -811,21 +524,66 @@ export const navigationConfig: NavItem[] = [
           },
         ],
       },
+      // {
+      //   title: "Calendar",
+      //   items: [
+      //     { label: "IQAC", href: "/academics/calendar/iqac" },
+      //     { label: "Academic", href: "/academics/calendar/academic" },
+      //     { label: "Department", href: "/academics/calendar/department" },
+      //     { label: "Examination", href: "/academics/calendar/examination" },
+      //     { label: "Activity", href: "/academics/calendar/activity" },
+      //     {
+      //       label: "Training & Placement",
+      //       href: "/academics/calendar/training-placement",
+      //     },
+      //     { label: "IIC", href: "/academics/calendar/iic" },
+      //   ],
+      // },
       {
-        title: "Calendar",
-        items: [
-          { label: "IQAC", href: "/academics/calendar/iqac" },
-          { label: "Academic", href: "/academics/calendar/academic" },
-          { label: "Department", href: "/academics/calendar/department" },
-          { label: "Examination", href: "/academics/calendar/examination" },
-          { label: "Activity", href: "/academics/calendar/activity" },
-          {
-            label: "Training & Placement",
-            href: "/academics/calendar/training-placement",
-          },
-          { label: "IIC", href: "/academics/calendar/iic" },
-        ],
-      },
+  title: "Calendar",
+  items: [
+    { 
+      label: "IQAC", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/IQACCalender2025-26.pdf",
+      target: "_blank"
+    },
+    { 
+      label: "Academic", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/AcademicCalender2025-26.pdf",
+      target: "_blank"
+    },
+    { 
+      label: "Department (Science)", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/Science_Department_Calendar.pdf",
+      target: "_blank"
+    },
+    { 
+      label: "Department (BA)", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/BACalendar.pdf",
+      target: "_blank"
+    },
+    { 
+      label: "Examination", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/ExaminationCalender2025-26.pdf",
+      target: "_blank"
+    },
+    { 
+      label: "Activity", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/Activityplanning2025-26.pdf",
+      target: "_blank"
+    },
+    {
+      label: "Training & Placement",
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/T&PCellCalender.docx",
+      target: "_blank"
+    },
+    { 
+      label: "IIC", 
+      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/IIC.xlsx",
+      target: "_blank"
+    },
+  ],
+},
       {
         title: "Fee Structure",
         items: [

@@ -20,6 +20,7 @@ import GuestFaculty from "./pages/human-capital/GuestFaculty";
 import FacultyDevelopmentProgram from "./pages/human-capital/FacultyDevelopmentProgram";
 
 import NonTeachingSatff from "./pages/human-capital/NonTeaching";
+import Arts from "./pages/academics/arts";
 
 // Administration Pages
 
@@ -73,6 +74,8 @@ const App = () => (
           
           {/* Academics - Fee Structure */}
           <Route path="/academics/fee-structure/:program" element={<FeeStructure />} />
+
+            <Route path="/academics/arts" element={<Arts />} />
           
           {/* Generic Pages for all other navigation items */}
           <Route path="/administration/*" element={<GenericPage />} />
