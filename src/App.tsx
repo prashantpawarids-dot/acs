@@ -3,8 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-// Pages
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Downloads from "./pages/Downloads";
@@ -13,26 +11,18 @@ import Contact from "./pages/Contact";
 import ApplyNow from "./pages/ApplyNow";
 import GenericPage from "./pages/GenericPage";
 import NotFound from "./pages/NotFound";
-
-// Human Capital Pages
 import TeachingStaff from "./pages/human-capital/TeachingStaff";
 import GuestFaculty from "./pages/human-capital/GuestFaculty";
 import FacultyDevelopmentProgram from "./pages/human-capital/FacultyDevelopmentProgram";
-
 import NonTeachingSatff from "./pages/human-capital/NonTeaching";
 import Arts from "./pages/academics/arts";
-
-// Administration Pages
-
-
 import CodeOfConduct from "./pages/administration/CodeOfConduct";
-
-
 import AcademicLeader from "./pages/administration/AcademicLeader";
-
-// Academics Pages
 import FeeStructure from "./pages/academics/FeeStructure";
-
+import GrievanceCell from "./pages/student-corner/GrievanceCell";
+import InternalCell from "./pages/student-corner/InternalCell";
+import AntiRagging from "./pages/student-corner/AntiRaging";
+import EqualOpportunityCell from "./pages/student-corner/EqualOpportunityCell";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -76,6 +66,11 @@ const App = () => (
           <Route path="/academics/fee-structure/:program" element={<FeeStructure />} />
 
             <Route path="/academics/arts" element={<Arts />} />
+
+            <Route path="/student-corner/grievance-cell" element={<GrievanceCell />} />
+            <Route path="/student-corner/complaint-cell" element={<InternalCell />} />
+            <Route path="/student-corner/anti-ragging" element={<AntiRagging />} />
+            <Route path="/student-corner/equal-opportunity" element={<EqualOpportunityCell />} />
           
           {/* Generic Pages for all other navigation items */}
           <Route path="/administration/*" element={<GenericPage />} />
