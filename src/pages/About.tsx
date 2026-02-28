@@ -240,6 +240,11 @@ interface AboutPageData {
   documents?: {
     affiliationLetter?: string;
     permissionLetter?: string;
+    codeOfConductForStudent?: string;
+    codeOfConductForTeachers?: string;
+    coreValues?: string;
+    generalPolicyACS?: string;
+    sppuCodeOfConduct?: string;
   };
   isTwoDirectors?: boolean;
 }
@@ -252,18 +257,47 @@ const About = () => {
       ? aboutData[page as keyof typeof aboutData]
       : null;
 
-  // ✅ FIX: check pageAboutData, NOT aboutData
+  // Fallback for About pages not in aboutData - show dummy content
   if (!pageAboutData) {
+    const fallbackTitle = page
+      ? String(page)
+          .split("-")
+          .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+          .join(" ")
+      : "About Us";
     return (
       <Layout>
         <PageHeader
-          title="About Us"
-          description="Learn about SNBP Arts, Commerce & Science College"
-          breadcrumbs={[{ label: "About Us" }]}
+          title={fallbackTitle}
+          description="Information about SNBP Arts, Commerce & Science College"
+          breadcrumbs={[{ label: "About Us", href: "/about/se-society" }, { label: fallbackTitle }]}
         />
         <section className="py-12">
           <div className="container">
-            <p className="text-muted-foreground">Page not found.</p>
+            <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+              <p className="text-foreground mb-6">
+                SNBP College of Arts, Commerce, Science & Management Studies, Morwadi, Pimpri, Pune is a premier institution established in 2008. Affiliated with Savitribai Phule Pune University and accredited with NAAC B++ Grade, the college offers undergraduate and postgraduate programs in Arts, Commerce, Science, and Management.
+              </p>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Key Highlights</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  SPPU affiliated programs (BA, B.Com, B.Sc., BBA, BCA, M.Com, MA)
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  NAAC B++ Accredited Institution
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  Modern infrastructure and library facilities
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  Strong placement and industry tie-ups
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </Layout>
@@ -399,12 +433,14 @@ const About = () => {
                 )}
 
                 {/* Documents */}
-                {pageAboutData.documents && (
+                {pageAboutData.documents && (() => {
+                  const docs = pageAboutData.documents as NonNullable<AboutPageData["documents"]>;
+                  return (
                   <div className="mt-6 flex flex-wrap gap-3">
-                    {pageAboutData.documents.permissionLetter && (
-                      <Button variant="outline" size="sm" asChild>
+                    {docs.permissionLetter && (
+                        <Button variant="outline" size="sm" asChild>
                         <a
-                          href={pageAboutData.documents.permissionLetter}
+                          href={docs.permissionLetter}
                           target="_blank"
                           rel="noopener noreferrer">
                           <ExternalLink className="w-4 h-4 mr-2" />
@@ -412,10 +448,10 @@ const About = () => {
                         </a>
                       </Button>
                     )}
-                    {pageAboutData.documents.codeOfConductForStudent && (
-                      <Button variant="outline" size="sm" asChild>
+                    {docs.codeOfConductForStudent && (
+                        <Button variant="outline" size="sm" asChild>
                         <a
-                          href={pageAboutData.documents.codeOfConductForStudent}
+                          href={docs.codeOfConductForStudent}
                           target="_blank"
                           rel="noopener noreferrer">
                           <FileDown className="w-4 h-4 mr-2" />
@@ -423,10 +459,10 @@ const About = () => {
                         </a>
                       </Button>
                     )}
-                    {pageAboutData.documents.codeOfConductForTeachers && (
-                      <Button variant="outline" size="sm" asChild>
+                    {docs.codeOfConductForTeachers && (
+                        <Button variant="outline" size="sm" asChild>
                         <a
-                          href={pageAboutData.documents.codeOfConductForTeachers}
+                          href={docs.codeOfConductForTeachers}
                           target="_blank"
                           rel="noopener noreferrer">
                           <FileDown className="w-4 h-4 mr-2" />
@@ -434,10 +470,10 @@ const About = () => {
                         </a>
                       </Button>
                     )}
-                    {pageAboutData.documents.coreValues && (
-                      <Button variant="outline" size="sm" asChild>
+                    {docs.coreValues && (
+                        <Button variant="outline" size="sm" asChild>
                         <a
-                          href={pageAboutData.documents.coreValues}
+                          href={docs.coreValues}
                           target="_blank"
                           rel="noopener noreferrer">
                           <FileDown className="w-4 h-4 mr-2" />
@@ -445,10 +481,10 @@ const About = () => {
                         </a>
                       </Button>
                     )}
-                    {pageAboutData.documents.generalPolicyACS && (
-                      <Button variant="outline" size="sm" asChild>
+                    {docs.generalPolicyACS && (
+                        <Button variant="outline" size="sm" asChild>
                         <a
-                          href={pageAboutData.documents.generalPolicyACS}
+                          href={docs.generalPolicyACS}
                           target="_blank"
                           rel="noopener noreferrer">
                           <FileDown className="w-4 h-4 mr-2" />
@@ -456,10 +492,10 @@ const About = () => {
                         </a>
                       </Button>
                     )}
-                    {pageAboutData.documents.sppuCodeOfConduct && (
-                      <Button variant="outline" size="sm" asChild>
+                    {docs.sppuCodeOfConduct && (
+                        <Button variant="outline" size="sm" asChild>
                         <a
-                          href={pageAboutData.documents.sppuCodeOfConduct}
+                          href={docs.sppuCodeOfConduct}
                           target="_blank"
                           rel="noopener noreferrer">
                           <FileDown className="w-4 h-4 mr-2" />
@@ -468,7 +504,8 @@ const About = () => {
                       </Button>
                     )}
                   </div>
-                )}
+                  );
+                })()}
               </div>
             </div>
 

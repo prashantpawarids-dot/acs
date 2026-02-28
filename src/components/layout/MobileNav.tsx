@@ -136,17 +136,32 @@ const MobileCategoryItem = ({ category, isExpanded, onToggle, onClose }: MobileC
 
       {isExpanded && (
         <ul className="mt-1 ml-4 space-y-1 animate-fade-in">
-          {category.items.map((subItem) => (
-            <li key={subItem.label}>
-              <Link
-                to={subItem.href}
-                onClick={onClose}
-                className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-primary-light rounded transition-colors"
-              >
-                {subItem.label}
-              </Link>
-            </li>
-          ))}
+          {category.items.map((subItem) => {
+            const isExternal = subItem.href.startsWith("http://") || subItem.href.startsWith("https://");
+            return (
+              <li key={subItem.label}>
+                {isExternal ? (
+                  <a
+                    href={subItem.href}
+                    target={subItem.target ?? "_blank"}
+                    rel={subItem.rel ?? "noopener noreferrer"}
+                    onClick={onClose}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-primary-light rounded transition-colors"
+                  >
+                    {subItem.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={subItem.href}
+                    onClick={onClose}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-primary-light rounded transition-colors"
+                  >
+                    {subItem.label}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

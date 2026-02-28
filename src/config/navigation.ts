@@ -1,7 +1,8 @@
 export interface NavSubItem {
   label: string;
   href: string;
-   target?: string;
+  target?: string;
+  rel?: string;
 }
 
 export interface NavSubCategory {
@@ -77,7 +78,7 @@ export const navigationConfig: NavItem[] = [
             label: "Board of Management",
             href: "/administration/board-of-management",
           },
-          { label: "Organogram", href: "http://snbpacsms.com/WebsitePages/assets/PDF/Organogram.pdf" },
+          { label: "Organogram", href: "http://snbpacsms.com/WebsitePages/assets/PDF/Organogram.pdf", target: "_blank", rel: "noopener noreferrer" },
         ],
       },
       {
@@ -86,12 +87,16 @@ export const navigationConfig: NavItem[] = [
           {
             label: "Statutory Committees",
             // href: "/administration/statutory-committees",
-             href: "http://snbpacsms.com/assets/PDF/Satutory.pdf"
+             href: "http://snbpacsms.com/assets/PDF/Satutory.pdf",
+             target: "_blank",
+             rel: "noopener noreferrer"
           },
           {
             label: "Non-Statutory Committees",
             // href: "/administration/non-statutory-committees",
-             href: "http://snbpacsms.com/assets/PDF/Non-Satutory.pdf"
+             href: "http://snbpacsms.com/assets/PDF/Non-Satutory.pdf",
+             target: "_blank",
+             rel: "noopener noreferrer"
           },
         ],
       },
@@ -159,42 +164,50 @@ export const navigationConfig: NavItem[] = [
     { 
       label: "IQAC", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/IQACCalender2025-26.pdf",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     { 
       label: "Academic", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/AcademicCalender2025-26.pdf",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     { 
       label: "Department (Science)", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/Science_Department_Calendar.pdf",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     { 
       label: "Department (BA)", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/BACalendar.pdf",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     { 
       label: "Examination", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/ExaminationCalender2025-26.pdf",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     { 
       label: "Activity", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/Activityplanning2025-26.pdf",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
       label: "Training & Placement",
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/T&PCellCalender.docx",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     { 
       label: "IIC", 
       href: "http://snbpacsms.com/assets/PDF/academic/Calendar/IIC.xlsx",
-      target: "_blank"
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
   ],
 },
@@ -310,19 +323,35 @@ export const navigationConfig: NavItem[] = [
   {
     label: "Placement & Career",
     subCategories: [
-      {
-        title: "Training & Placement",
-        items: [
-          {
-            label: "Training Activities",
-            href: "/placement/training-activities",
-          },
-          {
-            label: "Pre-Placement Activities",
-            href: "/placement/pre-placement",
-          },
-        ],
-      },
+{
+  title: "Training & Placement",
+  items: [
+    {
+      label: "Training Activities",
+      href: "/placement/training-activities",
+    },
+    {
+      label: "Pre-Placement Activities",
+      href: "/placement/pre-placement",
+    },
+    
+  ],
+},
+{
+  title: "Past Placements",
+  items: [
+    { label: "2024–25", href: "/placement/past-placements/2024-25" },
+    { label: "2023–24", href: "/placement/past-placements/2023-24" },
+    { label: "2022–23", href: "/placement/past-placements/2022-23" },
+    { label: "2021–22", href: "/placement/past-placements/2021-22" },
+    { label: "2020–21", href: "/placement/past-placements/2020-21" },
+  ],
+},
+ {
+      title: "Alumni",
+     
+      items: [{ label: "Alumni Cell", href: "/placement/alumini" }],
+    },
       {
         title: "Internship",
         items: [{ label: "Internship", href: "/placement/internship" }],

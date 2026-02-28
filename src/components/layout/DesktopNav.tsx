@@ -103,16 +103,30 @@ const NavItemComponent = ({ item, isActive, onMouseEnter, onMouseLeave }: NavIte
                     {category.title}
                   </h4>
                   <ul className="space-y-0.5">
-                    {category.items.map((subItem) => (
-                      <li key={subItem.label}>
-                        <Link
-                          to={subItem.href}
-                          className="block text-xs text-muted-foreground hover:text-primary hover:bg-primary-light px-1.5 py-1 rounded transition-colors"
-                        >
-                          {subItem.label}
-                        </Link>
-                      </li>
-                    ))}
+                    {category.items.map((subItem) => {
+                      const isExternal = subItem.href.startsWith("http://") || subItem.href.startsWith("https://");
+                      return (
+                        <li key={subItem.label}>
+                          {isExternal ? (
+                            <a
+                              href={subItem.href}
+                              target={subItem.target ?? "_blank"}
+                              rel={subItem.rel ?? "noopener noreferrer"}
+                              className="block text-xs text-muted-foreground hover:text-primary hover:bg-primary-light px-1.5 py-1 rounded transition-colors"
+                            >
+                              {subItem.label}
+                            </a>
+                          ) : (
+                            <Link
+                              to={subItem.href}
+                              className="block text-xs text-muted-foreground hover:text-primary hover:bg-primary-light px-1.5 py-1 rounded transition-colors"
+                            >
+                              {subItem.label}
+                            </Link>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               ))}

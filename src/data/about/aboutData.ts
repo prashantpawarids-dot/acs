@@ -319,6 +319,81 @@ Administrative Policies:
       sppuCodeOfConduct: "http://snbpacsms.com/WebsitePages/PDF/SPPU_Code_of_Conduct.pdf",
     },
   },
+  "strategic-plan": {
+    title: "Strategic Plan",
+    description: "Institutional strategic plan and development roadmap",
+    content: `Strategic Plan
+
+SNBP ACS has developed a comprehensive strategic plan to guide institutional growth and excellence. Our strategic priorities include:
+
+Academic Excellence:
+• Curriculum enhancement aligned with industry needs
+• Faculty development and research promotion
+• Quality assurance and accreditation readiness
+
+Infrastructure & Resources:
+• Modernization of labs and learning spaces
+• Digital library and e-resources expansion
+• Sports and cultural facility upgrades
+
+Student Success:
+• Placement and career support enhancement
+• Skill development and certification programs
+• Student welfare and support services
+
+The strategic plan is reviewed annually and updated to reflect changing educational needs and institutional goals.`,
+    image: `${API_BASE}/images/`,
+  },
+  "maharashtra-govt": {
+    title: "Maharashtra Govt. Approval",
+    description: "Government of Maharashtra approval and recognition",
+    content: `Maharashtra Government Approval
+
+SNBP College of Arts, Commerce, Science & Management Studies is duly approved and recognized by the Government of Maharashtra. The institution operates in compliance with all state government regulations for higher education.
+
+This approval confirms that the college meets the standards set by the state for running undergraduate and postgraduate programs in Arts, Commerce, Science, and Management disciplines.`,
+    image: `${API_BASE}/images/`,
+  },
+  aicte: {
+    title: "AICTE",
+    description: "All India Council for Technical Education approval",
+    content: `AICTE Approval
+
+SNBP ACS maintains compliance with AICTE guidelines for technical and management programs where applicable. The college ensures that all relevant programs meet the norms prescribed by the All India Council for Technical Education.`,
+    image: `${API_BASE}/images/`,
+  },
+  ugc: {
+    title: "UGC",
+    description: "University Grants Commission recognition",
+    content: `UGC Recognition
+
+SNBP College of Arts, Commerce, Science & Management Studies is recognized under the University Grants Commission (UGC) Act. The institution upholds UGC standards for higher education and participates in various UGC-sponsored schemes and programs.`,
+    image: `${API_BASE}/images/`,
+  },
+  sppu: {
+    title: "SPPU Affiliation",
+    description: "Savitribai Phule Pune University affiliation",
+    content: `SPPU Affiliation
+
+SNBP ACS is affiliated with Savitribai Phule Pune University (SPPU). All undergraduate and postgraduate programs follow the curriculum, syllabus, and examination pattern prescribed by the university. The college adheres to SPPU regulations for admissions, examinations, and academic operations.`,
+    image: `${API_BASE}/images/`,
+  },
+  "12b": {
+    title: "UGC 12B Status",
+    description: "UGC 12(B) recognition for receiving central assistance",
+    content: `UGC 12(B) Status
+
+SNBP ACS has been granted 12(B) status by the University Grants Commission. This status enables the institution to receive central government grants and participate in various UGC-funded development programs for infrastructure, faculty, and research.`,
+    image: `${API_BASE}/images/`,
+  },
+  "2f": {
+    title: "UGC 2(F) Status",
+    description: "UGC 2(F) recognition for deemed university and central assistance",
+    content: `UGC 2(F) Status
+
+SNBP ACS complies with UGC 2(F) regulations, which govern institutions eligible for central assistance. This status reflects the college's adherence to quality standards and eligibility for various central government schemes.`,
+    image: `${API_BASE}/images/`,
+  },
   organogram: {
     title: "Organogram",
     description: "Organizational structure of SNBP ACS",
