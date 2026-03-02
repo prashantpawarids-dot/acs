@@ -167,8 +167,8 @@ const Journals = () => {
           {/* RIGHT — Details + Student PDFs */}
           <div className="flex-1 space-y-6">
 
-            {/* Staff Paper Detail Card */}
-            {selected ? (
+            {/* Staff Paper Detail Card — only show when selected */}
+            {selected && (
               <Card className="border-t-4 border-t-primary">
                 <CardContent className="pt-5 pb-5 px-5">
                   <div className="flex items-start justify-between gap-3 mb-4">
@@ -184,7 +184,6 @@ const Journals = () => {
                       </Button>
                     )}
                   </div>
-
                   {selected.papers.length > 0 ? (
                     <div className="space-y-3">
                       {selected.papers.map((p, i) => (
@@ -206,44 +205,55 @@ const Journals = () => {
                   )}
                 </CardContent>
               </Card>
-            ) : (
-              <Card className="border border-dashed border-border">
-                <CardContent className="py-10 flex flex-col items-center text-center gap-2">
-                  <ChevronRight className="w-8 h-8 text-muted-foreground/40" />
-                  <p className="text-sm text-muted-foreground">Select a staff member to view their research papers</p>
-                </CardContent>
-              </Card>
             )}
 
             {/* Student Research Papers */}
             <div>
               <h2 className="text-base font-bold text-foreground mb-3">Student Research Papers</h2>
               <div className="flex flex-wrap gap-4">
-                {studentPdfs.map((p) => (
-                  <Card
-                    key={p.label}
-                    className={`w-52 text-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-t-4 ${p.color} rounded-2xl`}
-                  >
-                    <CardContent className="pt-5 pb-4 px-4 flex flex-col items-center gap-3">
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/337/337946.png"
-                        alt="PDF"
-                        className="w-16 drop-shadow-lg"
-                      />
-                      <span className={`text-xs font-bold tracking-wide uppercase px-2 py-1 rounded-full border text-center leading-tight ${p.badge}`}>
-                        {p.label}
-                      </span>
-                      <Button
-                        size="sm"
-                        className={`rounded-full gap-1.5 w-full text-xs ${p.btn}`}
-                        onClick={() => window.open(p.href, "_blank")}
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                        View PDF
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                <Card className="w-52 text-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-t-4 border-t-emerald-500 rounded-2xl">
+                  <CardContent className="pt-5 pb-4 px-4 flex flex-col items-center gap-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF" className="w-16 drop-shadow-lg" />
+                    <span className="text-xs font-bold tracking-wide uppercase px-2 py-1 rounded-full border text-center leading-tight bg-emerald-100 text-emerald-700 border-emerald-200">
+                      Students Research Papers
+                    </span>
+                    <Button size="sm" className="rounded-full gap-1.5 w-full text-xs bg-emerald-500 hover:bg-emerald-600 text-white"
+                      onClick={() => window.open("http://snbpacsms.com/WebsitePages/PDF/StudentsResearchPapers.pdf", "_blank")}>
+                      <ExternalLink className="w-3 h-3" /> View PDF
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Research Papers by Year */}
+            <div>
+              <h2 className="text-base font-bold text-foreground mb-3">Research Papers</h2>
+              <div className="flex flex-wrap gap-4">
+                <Card className="w-52 text-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-t-4 border-t-indigo-600 rounded-2xl">
+                  <CardContent className="pt-5 pb-4 px-4 flex flex-col items-center gap-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF" className="w-16 drop-shadow-lg" />
+                    <span className="text-xs font-bold tracking-wide uppercase px-2 py-1 rounded-full border text-center leading-tight bg-indigo-100 text-indigo-700 border-indigo-200">
+                      Research Paper 2024–25
+                    </span>
+                    <Button size="sm" className="rounded-full gap-1.5 w-full text-xs bg-indigo-600 hover:bg-indigo-700 text-white"
+                      onClick={() => window.open("http://snbpacsms.com/WebsitePages/PDF/Researchpaper2024-25.pdf", "_blank")}>
+                      <ExternalLink className="w-3 h-3" /> View PDF
+                    </Button>
+                  </CardContent>
+                </Card>
+                <Card className="w-52 text-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-t-4 border-t-red-500 rounded-2xl">
+                  <CardContent className="pt-5 pb-4 px-4 flex flex-col items-center gap-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF" className="w-16 drop-shadow-lg" />
+                    <span className="text-xs font-bold tracking-wide uppercase px-2 py-1 rounded-full border text-center leading-tight bg-red-100 text-red-700 border-red-200">
+                      Research Paper 2023–24
+                    </span>
+                    <Button size="sm" className="rounded-full gap-1.5 w-full text-xs bg-red-500 hover:bg-red-600 text-white"
+                      onClick={() => window.open("http://snbpacsms.com/WebsitePages/PDF/Researchpaper2023-24.pdf", "_blank")}>
+                      <ExternalLink className="w-3 h-3" /> View PDF
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
 

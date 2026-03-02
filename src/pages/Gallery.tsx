@@ -2,17 +2,17 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/common/PageHeader";
-import { galleryData } from "@/data/gallery/galleryData";
 
-const categories = ["All", "Campus", "Facilities", "Academics", "Sports", "Events"];
+const BASE_URL = import.meta.env.VITE_STATIC_ASSETS;
+
+const galleryImages = Array.from({ length: 8 }, (_, i) => ({
+  id: i + 1,
+  url: `${BASE_URL}/images/gallery/slider/p${i + 1}.JPG`,
+  name: `Gallery Photo ${i + 1}`,
+}));
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredImages = galleryData.filter(
-    (image) => selectedCategory === "All" || image.category === selectedCategory
-  );
 
   return (
     <Layout>
@@ -24,26 +24,9 @@ const Gallery = () => {
 
       <section className="py-12">
         <div className="container">
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 mb-6 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 text-sm rounded-full transition-colors ${
-                  selectedCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-foreground hover:bg-secondary/80"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredImages.map((image) => (
+            {galleryImages.map((image) => (
               <button
                 key={image.id}
                 onClick={() => setSelectedImage(image.url)}
@@ -58,7 +41,6 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="absolute bottom-3 left-3">
                     <p className="text-background font-medium text-sm">{image.name}</p>
-                    <p className="text-background/80 text-xs">{image.category}</p>
                   </div>
                 </div>
               </button>
