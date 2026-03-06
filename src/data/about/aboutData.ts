@@ -153,7 +153,7 @@ Vice-Principal`,
 The Principal Desk serves as the central hub for academic leadership and administrative excellence at our institution. Our principal provides visionary guidance and ensures the highest standards of education and student development.
 
 Under the leadership of our principal, SNBP ACS continues to excel in providing quality education, fostering innovation, and preparing students for successful careers.`,
-  image: `http://snbpacsms.com/WebsitePages/TeachingPhoto/1.png`,
+    image: `http://snbpacsms.com/WebsitePages/TeachingPhoto/1.png`,
     author: "Dr. Dashrath Bhosale",
     position: "Principle"
   },
@@ -353,6 +353,7 @@ SNBP College of Arts, Commerce, Science & Management Studies is duly approved an
 
 This approval confirms that the college meets the standards set by the state for running undergraduate and postgraduate programs in Arts, Commerce, Science, and Management disciplines.`,
     image: `${API_BASE}/images/`,
+   pdf: `${API_BASE}/PDF/permissionsapproval/maharashtragovt.pdf`,
   },
   aicte: {
     title: "AICTE",
@@ -361,6 +362,7 @@ This approval confirms that the college meets the standards set by the state for
 
 SNBP ACS maintains compliance with AICTE guidelines for technical and management programs where applicable. The college ensures that all relevant programs meet the norms prescribed by the All India Council for Technical Education.`,
     image: `${API_BASE}/images/`,
+  pdf: `${API_BASE}/PDF/permissionsapproval/AICTE.PDF`,
   },
   ugc: {
     title: "UGC",
@@ -377,6 +379,7 @@ SNBP College of Arts, Commerce, Science & Management Studies is recognized under
 
 SNBP ACS is affiliated with Savitribai Phule Pune University (SPPU). All undergraduate and postgraduate programs follow the curriculum, syllabus, and examination pattern prescribed by the university. The college adheres to SPPU regulations for admissions, examinations, and academic operations.`,
     image: `${API_BASE}/images/`,
+    pdf: `${API_BASE}/PDF/permissionsapproval/SPPU.pdf`,
   },
   "12b": {
     title: "UGC 12B Status",
