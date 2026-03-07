@@ -81,6 +81,9 @@ import StaffLogin from "./pages/StaffLogin";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Sitemap from "./pages/Sitemap";
+import Objectives from "./pages/about/objective";
+import Mission from "./pages/about/mission";
+import Vision from "./pages/about/vission";
 
 const queryClient = new QueryClient();
 
@@ -93,6 +96,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about/:page" element={<About />} />
+          <Route path="/about/vision" element={<Vision />} />
+<Route path="/about/mission" element={<Mission />} />
+<Route path="/about/objectives" element={<Objectives />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
