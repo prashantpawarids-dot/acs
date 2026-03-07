@@ -4,7 +4,7 @@ export interface NavSubItem {
   target?: string;
   rel?: string;
 }
-
+const BaseUrl = import.meta.env.VITE_STATIC_ASSETS;
 export interface NavSubCategory {
   title: string;
   items: NavSubItem[];
@@ -199,13 +199,15 @@ export const navigationConfig: NavItem[] = [
     },
     {
       label: "Training & Placement",
-      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/T&PCellCalender.docx",
+      // href: "http://snbpacsms.com/assets/PDF/academic/Calendar/T&PCellCalender.docx",
+      href: `${BaseUrl}/PDF/FeeStructure/DigitalPlacementBroucher.pdf`,
       target: "_blank",
       rel: "noopener noreferrer"
     },
     { 
       label: "IIC", 
-      href: "http://snbpacsms.com/assets/PDF/academic/Calendar/IIC.xlsx",
+      // href: "http://snbpacsms.com/assets/PDF/academic/Calendar/IIC.xlsx",
+      href:`${BaseUrl}/PDF/academic/Calendar/IIC.pdf`,
       target: "_blank",
       rel: "noopener noreferrer"
     },
