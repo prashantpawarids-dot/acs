@@ -84,6 +84,9 @@ import Sitemap from "./pages/Sitemap";
 import Objectives from "./pages/about/objective";
 import Mission from "./pages/about/mission";
 import Vision from "./pages/about/vission";
+import NAAC from "./pages/about/accreditationrangingNAAC";
+import IIC from "./pages/about/accreditationrangingIIC";
+
 
 const queryClient = new QueryClient();
 
@@ -97,6 +100,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about/:page" element={<About />} />
           <Route path="/about/vision" element={<Vision />} />
+          <Route path="/about/naac" element={<NAAC />} />
+          <Route path="/about/iic" element={<IIC />} />
 <Route path="/about/mission" element={<Mission />} />
 <Route path="/about/objectives" element={<Objectives />} />
           <Route path="/downloads" element={<Downloads />} />

@@ -475,6 +475,7 @@ SNBP ACS complies with UGC 2(F) regulations, which govern institutions eligible 
       },
     ],
   },
+  // Accreditation and Rankings
   naac: {
     title: "NAAC Accreditation",
     description: "Our NAAC accreditation status and achievements",

@@ -181,7 +181,7 @@ const Arts = () => {
         />
 
         {/* Course Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
           {courses.map((c) => (
             <Card key={c.short} className={`border-t-4 ${c.color} rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300`}>
               <CardContent className="pt-5 pb-5 px-5">
@@ -204,10 +204,10 @@ const Arts = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </div> */}
 
         {/* Comparison Table */}
-        <Card className="mt-8">
+        <Card className="mt-0">
           <CardContent className="pt-5 pb-2 px-0">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
