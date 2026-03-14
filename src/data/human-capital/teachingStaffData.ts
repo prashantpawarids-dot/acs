@@ -1,488 +1,3 @@
-// // Teaching Staff Data 
-
-// export interface FacultyMember {
-//   id: string;
-//   name: string;
-//   designation: string;
-//   email: string;
-//   experience: string;
-//   image: string;
-//   education: {
-//     degree: string;
-//     specialization: string;
-//     university: string;
-//     year: string;
-//     percentage: string;
-//   }[];
-//   publications: {
-//     category: string;
-//     count: number;
-//   }[];
-//   achievements: {
-//     recognition: string;
-//     organization: string;
-//     year: string;
-//   }[];
-//   profileLinks: {
-//     linkedin?: string;
-//     googleScholar?: string;
-//     researchGate?: string;
-//   };
-// }
-
-// export const teachingStaffData: FacultyMember[] = [
-//   {
-//     id: "dr-dashrath-bhosale",
-//     name: "Dr. Dashrath Bhosale",
-//     designation: "Principal",
-//     email: "principal@snbpacs.edu.in",
-//     experience: "38 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/1.png",
-//     education: [
-//       {
-//         degree: "Ph.D",
-//         specialization: "Chemistry",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "M.Phil",
-//         specialization: "Chemistry",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "M.Sc",
-//         specialization: "Chemistry",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "dr-sudhir-atwadkar",
-//     name: "Prof. (Dr.) Sudhir Atwadkar",
-//     designation: "Professor",
-//     email: "sudhir.atwadkar@snbpacs.edu.in",
-//     experience: "27 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/2_Dr%20Sudhir.jpg",
-//     education: [
-//       {
-//         degree: "Ph.D",
-//         specialization: "Management",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "M.Phil",
-//         specialization: "Management",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "MBA",
-//         specialization: "Marketing & HR",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "MMM",
-//         specialization: "Marketing Management",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "LLB",
-//         specialization: "Law",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "MA",
-//         specialization: "Psychology",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 50 }],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "2" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "gauri-shirude",
-//     name: "Mrs. Gauri S. Shirude",
-//     designation: "Assistant Professor",
-//     email: "gauri.shirude@gmail.com",
-//     experience: "12 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/5_Gauri%20Shirude.JPG",
-//     education: [
-//       {
-//         degree: "M.Sc",
-//         specialization: "Computer Science",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 4 }],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "3" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "sushma-pingale",
-//     name: "Mrs. Sushma M. Pingale",
-//     designation: "Assistant Professor",
-//     email: "sushma.pingale@snbpacs.edu.in",
-//     experience: "12 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/4_Sushma.jpg",
-//     education: [
-//       {
-//         degree: "M.E.",
-//         specialization: "VLSI & Embedded System",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 7 }],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "1" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "danish-sayyed",
-//     name: "Mr. Danish S. Sayyed",
-//     designation: "Director of Physical Education",
-//     email: "danish.sayyed@snbpacs.edu.in",
-//     experience: "6 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/5_Danish.jpg",
-//     education: [
-//       {
-//         degree: "M.P.Ed",
-//         specialization: "Physical Education",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "1" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "swati-inamdar",
-//     name: "Mrs. Swati P. Inamdar",
-//     designation: "Assistant Professor",
-//     email: "swati.inamdar@snbpacs.edu.in",
-//     experience: "17 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/6_Swati.jpg",
-//     education: [
-//       {
-//         degree: "MBA",
-//         specialization: "HR",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "M.Com",
-//         specialization: "Commerce",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "MPM",
-//         specialization: "Personnel Management",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 8 }],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "atul-jadhav",
-//     name: "Mr. Atul S. Jadhav",
-//     designation: "Assistant Professor",
-//     email: "atul.jadhav@snbpacs.edu.in",
-//     experience: "7 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/7_Atul.jpg",
-//     education: [
-//       {
-//         degree: "MA",
-//         specialization: "English Literature",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 6 }],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "6" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "jaydip-patil",
-//     name: "Mr. Jaydip Y. Patil",
-//     designation: "Assistant Professor",
-//     email: "jaydip.patil@snbpacs.edu.in",
-//     experience: "1 Year",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/8_Jaydip.jpg",
-//     education: [
-//       {
-//         degree: "M.Sc",
-//         specialization: "Statistics",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 1 }],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "madhavi-chinchwade",
-//     name: "Ms. Madhavi N. Chinchwade",
-//     designation: "Assistant Professor",
-//     email: "madhavi.chinchwade@snbpacs.edu.in",
-//     experience: "7 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/9_Madhavi.jpg",
-//     education: [
-//       {
-//         degree: "MBA",
-//         specialization: "HR",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "M.Com",
-//         specialization: "Commerce",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 8 }],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "8" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "devana-rathod",
-//     name: "Mr. Devana Nagesh Rathod",
-//     designation: "Assistant Professor",
-//     email: "devana.rathod@snbpacs.edu.in",
-//     experience: "2 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/10_Devana.jpg",
-//     education: [
-//       {
-//         degree: "MA",
-//         specialization: "Economics",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 4 }],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "pooja-mhetre",
-//     name: "Ms. Pooja R. Mhetre",
-//     designation: "Assistant Professor",
-//     email: "pooja.mhetre@snbpacs.edu.in",
-//     experience: "1 Year",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/11_Pooja.jpg",
-//     education: [
-//       {
-//         degree: "MCA",
-//         specialization: "Computer Application",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 1 }],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "pratidnya-dangarne",
-//     name: "Ms. Pratidnya G. Dangarne",
-//     designation: "Assistant Professor",
-//     email: "pratidnya.dangarne@snbpacs.edu.in",
-//     experience: "4 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/12_Pratidnya.jpg",
-//     education: [
-//       {
-//         degree: "M.Sc",
-//         specialization: "Mathematics",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "almas-shaikh",
-//     name: "Mrs. Almas S. Shaikh",
-//     designation: "Assistant Professor",
-//     email: "almas.shaikh@snbpacs.edu.in",
-//     experience: "5 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/13_Almas.jpg",
-//     education: [
-//       {
-//         degree: "M.Sc",
-//         specialization: "Computer Science",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "priyanka-kasar",
-//     name: "Mrs. Priyanka P. Kasar",
-//     designation: "Assistant Professor",
-//     email: "priyanka.kasar@snbpacs.edu.in",
-//     experience: "7 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/14_Priyanka.jpg",
-//     education: [
-//       {
-//         degree: "M.Com",
-//         specialization: "Cost & Management Accounting",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "M.Ed",
-//         specialization: "Education",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "MA",
-//         specialization: "Arts",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//       {
-//         degree: "Ph.D (Pursuing)",
-//         specialization: "-",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [{ category: "Total Publications", count: 3 }],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "1" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "shalini-alamuri",
-//     name: "Mrs. Shalini Alamuri",
-//     designation: "Assistant Professor",
-//     email: "shalini.alamuri@snbpacs.edu.in",
-//     experience: "1 Year",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/15_Shalini.jpg",
-//     education: [
-//       {
-//         degree: "M.Sc",
-//         specialization: "Computer Science",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [
-//       { recognition: "Awards", organization: "Various", year: "1" },
-//     ],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "aashvini-tamboli",
-//     name: "Ms. Aashvini K. Tamboli",
-//     designation: "Assistant Professor",
-//     email: "aashvini.tamboli@snbpacs.edu.in",
-//     experience: "1 Year",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/16_Aashvini.jpg",
-//     education: [
-//       {
-//         degree: "M.Sc",
-//         specialization: "Computer Science",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-//   {
-//     id: "kavitharani-bellamkonda",
-//     name: "Mrs. Kavitharani Bellamkonda",
-//     designation: "Assistant Professor",
-//     email: "kavitharani.bellamkonda@snbpacs.edu.in",
-//     experience: "3 Years",
-//     image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/17_Kavitharani.jpg",
-//     education: [
-//       {
-//         degree: "MBA",
-//         specialization: "HR & Marketing",
-//         university: "SPPU",
-//         year: "-",
-//         percentage: "-",
-//       },
-//     ],
-//     publications: [],
-//     achievements: [],
-//     profileLinks: {},
-//   },
-// ];
-
-
-// Teaching Staff Data - Exact data as per client Excel sheet
-
 export interface FacultyMember {
   id: string;
   sr: number;
@@ -497,7 +12,7 @@ export interface FacultyMember {
   photo: string;
 }
 
-const BASE_PHOTO = "http://snbpacsms.com/WebsitePages/TeachingPhoto/";
+const BASE_PHOTO = import.meta.env.VITE_STATIC_ASSETS+"/images/TeachingStaff/";
 
 export const teachingStaffData: FacultyMember[] = [
   {
@@ -511,7 +26,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 38,
     publications: "NIL",
     awards: "NIL",
-    photo: `${BASE_PHOTO}1.png`,
+    photo: `${BASE_PHOTO}DashrathBhosale.png`,
   },
   {
     id: "dr-sudhir-atwadkar",
@@ -524,7 +39,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 27,
     publications: 50,
     awards: 2,
-    photo: `${BASE_PHOTO}2_Dr%20Sudhir.jpg`,
+    photo: `${BASE_PHOTO}SudhirAtwadkar.png`,
   },
   {
     id: "gauri-shirude",
@@ -537,7 +52,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 12,
     publications: 4,
     awards: 3,
-    photo: `${BASE_PHOTO}5_Gauri%20Shirude.JPG`,
+   photo: `${BASE_PHOTO}GauriShirude.png`,
   },
   {
     id: "sushma-pingale",
@@ -550,7 +65,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 12,
     publications: 7,
     awards: 1,
-    photo: `${BASE_PHOTO}4_Sushma.jpg`,
+  photo: `${BASE_PHOTO}SushmaPingale.png`,
   },
   {
     id: "danish-sayyed",
@@ -563,7 +78,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 6,
     publications: "NIL",
     awards: 1,
-    photo: `${BASE_PHOTO}5_Danish.jpg`,
+    photo: `${BASE_PHOTO}DanishSayyed.png`,
   },
   {
     id: "swati-inamdar",
@@ -576,7 +91,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 17,
     publications: 8,
     awards: 0,
-    photo: `${BASE_PHOTO}6_Swati.jpg`,
+   photo: `${BASE_PHOTO}SwatiInamdar.png`,
   },
   {
     id: "atul-jadhav",
@@ -589,7 +104,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 7,
     publications: 6,
     awards: 6,
-    photo: `${BASE_PHOTO}7_Atul.jpg`,
+   photo: `${BASE_PHOTO}AtulJadhav.png`,
   },
   {
     id: "jaydip-patil",
@@ -602,7 +117,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 1,
     publications: 1,
     awards: "NIL",
-    photo: `${BASE_PHOTO}8_Jaydip.jpg`,
+  photo: `${BASE_PHOTO}JaydipPatil.png`,
   },
   {
     id: "madhavi-chinchwade",
@@ -615,7 +130,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 7,
     publications: 8,
     awards: 8,
-    photo: `${BASE_PHOTO}9_Madhavi.jpg`,
+   photo: `${BASE_PHOTO}MadhaviChinchwade.png`,
   },
   {
     id: "devana-rathod",
@@ -628,7 +143,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 2,
     publications: 4,
     awards: "NIL",
-    photo: `${BASE_PHOTO}10_Devana.jpg`,
+   photo: `${BASE_PHOTO}DevanaNageshRathod.png`,
   },
   {
     id: "pooja-mhetre",
@@ -641,7 +156,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 1,
     publications: 1,
     awards: "NIL",
-    photo: `${BASE_PHOTO}11_Pooja.jpg`,
+   photo: `${BASE_PHOTO}PoojaMhetre.png`,
   },
   {
     id: "pratidnya-dangarne",
@@ -654,7 +169,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 4,
     publications: "NIL",
     awards: "NIL",
-    photo: `${BASE_PHOTO}12_Pratidnya.jpg`,
+   photo: `${BASE_PHOTO}PratidnyaDangarne.png`,
   },
   {
     id: "almas-shaikh",
@@ -667,7 +182,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 5,
     publications: "NIL",
     awards: "NIL",
-    photo: `${BASE_PHOTO}13_Almas.jpg`,
+   photo: `${BASE_PHOTO}AlmasShaikh.png`,
   },
   {
     id: "priyanka-kasar",
@@ -680,7 +195,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 7,
     publications: 3,
     awards: 1,
-    photo: `${BASE_PHOTO}14_Priyanka.jpg`,
+    photo: `${BASE_PHOTO}PriyankaKasar.png`,
   },
   {
     id: "shalini-alamuri",
@@ -693,7 +208,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 5,
     publications: "NIL",
     awards: 1,
-    photo: `${BASE_PHOTO}15_Shalini.jpg`,
+    photo: `${BASE_PHOTO}ShaliniAlamuri.png`,
   },
   {
     id: "aashvini-tamboli",
@@ -706,7 +221,7 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 1,
     publications: "NIL",
     awards: "NIL",
-    photo: `${BASE_PHOTO}16_Aashvini.jpg`,
+   photo: `${BASE_PHOTO}AashviniTamboli.png`,
   },
   {
     id: "kavitharani-bellamkonda",
@@ -719,6 +234,6 @@ export const teachingStaffData: FacultyMember[] = [
     experience: 3,
     publications: "NIL",
     awards: "NIL",
-    photo: `${BASE_PHOTO}17_Kavitharani.jpg`,
+    photo: `${BASE_PHOTO}KavitharaniBellamkonda.png`,
   },
 ];
