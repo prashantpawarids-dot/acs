@@ -86,6 +86,8 @@ import Mission from "./pages/about/mission";
 import Vision from "./pages/about/vission";
 import NAAC from "./pages/about/accreditationrangingNAAC";
 import IIC from "./pages/about/accreditationrangingIIC";
+import InstitutionPolicy from "./pages/about/institution-policy";
+import StrategicPlan from "./pages/about/strategic-plan";
 
 
 const queryClient = new QueryClient();
@@ -104,6 +106,8 @@ const App = () => (
           <Route path="/about/iic" element={<IIC />} />
 <Route path="/about/mission" element={<Mission />} />
 <Route path="/about/objectives" element={<Objectives />} />
+<Route path="/about/institution-policy" element={<InstitutionPolicy />} />
+<Route path="/about/strategic-plan" element={<StrategicPlan />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />

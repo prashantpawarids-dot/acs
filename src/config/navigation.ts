@@ -149,7 +149,7 @@ export const navigationConfig: NavItem[] = [
         title: "Academics Programs & Syllabus",
         items: [
           { label: "Arts", href: "/academics/arts" },
-          { label: "Commerce", href: "/academics/commerce" },
+          { label: "Commerce & Management", href: "/academics/commerce" },
           { label: "Science", href: "/academics/science" },
           {
             label: "Online / Offline Certification",
