@@ -151,7 +151,7 @@ const TeachingStaff = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
             {[
               { label: "Total Faculty",    value: teachingStaffData.length, color: "border-t-indigo-600" },
-              { label: "Patents ", value: `${2}+ Yrs`,       color: "border-t-emerald-500" },
+              { label: "Patents ", value: `${2}`,       color: "border-t-emerald-500" },
               { label: "Publications",     value: totalPub,                  color: "border-t-orange-500" },
               { label: "Awards",           value: totalAwd,                  color: "border-t-rose-500" },
             ].map((stat) => (
